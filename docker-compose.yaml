@@ -1,0 +1,19 @@
+services:
+  mailhog:
+    image: mailhog/mailhog:v1.0.1
+    hostname: smtp
+    container_name: smtp
+    restart: always
+    ports:
+      - 1025:1025
+    labels:
+      traefik.enable: "true"
+      traefik.http.routers.mailhog.entrypoints: "web"
+      traefik.http.routers.mailhog.rule: "Host(`smtp.localtest.me`)"
+      traefik.http.services.mailhog.loadbalancer.server.port: "8025"
+
+networks:
+  default:
+  proxy:
+    external: true
+    name: proxy
