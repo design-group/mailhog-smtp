@@ -23,3 +23,8 @@ ___
 	```sh
     docker-compose pull && docker-compose up -d
     ```
+
+## Usage
+The MailHog SMTP is configured to use the `proxy` network.
+
+Once the container restarts, it should be accessible at [http://smtp.localtest.me:8025](http://smtp.localtest.me:8025/)
