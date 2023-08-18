@@ -1,7 +1,4 @@
 # MailHog SMTP
-
-___
-
 ## Setup
 
 1. Clone this repository locally.
@@ -27,4 +24,11 @@ ___
 ## Usage
 The MailHog SMTP is configured to use the `proxy` network.
 
-Once the container restarts, it should be accessible at [http://smtp.localtest.me:8025](http://smtp.localtest.me:8025/)
+Once the container starts, it should be accessible at [http://smtp.localtest.me:8025](http://smtp.localtest.me:8025/)
+
+### In Ignition
+Email Settings
+```sh
+    Hostname: smtp
+    Port: 1025
+```

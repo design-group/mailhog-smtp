@@ -12,9 +12,10 @@ services:
       traefik.http.routers.mailhog.entrypoints: "web"
       traefik.http.routers.mailhog.rule: "Host(`smtp.localtest.me`)"
       traefik.http.services.mailhog.loadbalancer.server.port: "8025"
+    networks:
+      - proxy
 
 networks:
-  default:
   proxy:
     external: true
     name: proxy
