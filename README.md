@@ -32,3 +32,5 @@ Email Settings
     Hostname: smtp
     Port: 1025
 ```
+## Running The Project
+In order to run this project you need the Traefik Proxy. It can be found [here.](https://github.com/design-group/traefik-proxy)
